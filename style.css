@@ -1,5 +1,5 @@
 body {
-    background: white;
+    background: rgb(255, 255, 255);
 }
 
 h1 {
@@ -8,14 +8,54 @@ h1 {
     text-align: center;
 }
 
-h2 {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+.Header {
+    width: 100%;
+    margin-bottom: 50px;
 }
 
-h3 {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+#Navbar {
+    width: 100%;
+    text-align: right;
+    padding-top: 50px;
 }
+
+#Navbar ul {
+    display: inline;
+    padding-inline-start: 20px;
+}
+
+#Signature {
+    float: left;
+    display: inline;
+    padding-left: 50px;
+    padding-top: 5px;
+}
+
+#Signature:hover {
+    transform: scale(1.2);
+}
+
+ul {
+    display: inline;
+}
+
+#Mail {
+    padding-inline-end: 100px;
+}
+
+#Github:hover {
+    transform: scale(1.2);
+}
+
+#Twitter:hover {
+    transform: scale(1.2);
+}
+
+#LinkedIn:hover {
+    transform: scale(1.2);
+}
+
+#Mail:hover {
+    transform: scale(1.2);
+}
+
