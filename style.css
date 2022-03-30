@@ -3,11 +3,11 @@ body {
     width: 100%;
 }
 
-h1 {
+h1, h2 {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-family: 'Levorotary';
+    font-family: 'Yanone Kaffeesatz';
 }
 
 .Header {
@@ -67,10 +67,34 @@ ul {
     margin-right: auto;
 }
 
-#Headshot {
+.magic8ball {
+    position: relative;
+    text-align: center;
     width: 100%;
-    opacity: .8;
 }
 
+#EightBall {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
 
+#result {
+    font-family: 'Arial';
+    color: white;
+    z-index: 2;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    top: 46%;
+    left: 47%;
+    right: 47%;
+  
+}
+
+#Eightball:hover {
+    transform: scale(1.1);
+}
 
