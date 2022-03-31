@@ -98,3 +98,8 @@ ul {
     transform: scale(1.1);
 }
 
+.ropasc li {
+    text-align: center;
+    display: inline-block;
+}
+

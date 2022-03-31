@@ -68,3 +68,58 @@ let shake = function shakeEightBall() {
 const eightBall = document.querySelector(".eightball");
 eightBall.addEventListener('click', shake);
 
+
+
+
+document.querySelectorAll('.rps').forEach(item => {
+    item.addEventListener('click', rockPaperScissors);
+});
+
+function getCompChoice () {
+    let num = Math.floor(Math.random() * 3);
+    let compChoice;
+    if (num === 0) {
+        compChoice = "rock"
+    } else if (num === 1) {
+        compChoice = "paper"
+    } else if (num === 2) {
+        compChoice = "scissors"
+    };
+    return compChoice
+}
+
+function rockPaperScissors () {
+    let compChoice = getCompChoice();
+    let winner = 'Error';
+    if (this.id === 'rock' && compChoice === 'rock') {
+        winner = `User Selected: ${this.id.toUpperCase()}, Computer Selected: ${compChoice.toUpperCase()}. It's a tie! Try again.`
+    } else if (this.id === 'rock' && compChoice === 'scissors') {
+        winner = `User Selected: ${this.id.toUpperCase()}, Computer Selected: ${compChoice.toUpperCase()}. User WINS!!`
+    } else if (this.id === 'rock' && compChoice === 'paper') {
+        winner = `User Selected: ${this.id.toUpperCase()}, Computer Selected: ${compChoice.toUpperCase()}. Computer WINS!!`
+    } else if (this.id === 'paper' && compChoice === 'rock') {
+        winner = `User Selected: ${this.id.toUpperCase()}, Computer Selected: ${compChoice.toUpperCase()}. User WINS!!`
+    } else if (this.id === 'paper' && compChoice === 'paper') {
+        winner = `User Selected: ${this.id.toUpperCase()}, Computer Selected: ${compChoice.toUpperCase()}. It's a tie! Try again.`
+    } else if (this.id === 'paper' && compChoice === 'scissors') {
+        winner = `User Selected: ${this.id.toUpperCase()}, Computer Selected: ${compChoice.toUpperCase()}. Computer WINS!!`
+    } else if (this.id === 'scissors' && compChoice === 'rock') {
+        winner = `User Selected: ${this.id.toUpperCase()}, Computer Selected: ${compChoice.toUpperCase()}. Computer WINS!!`
+    } else if (this.id === 'scissors' && compChoice === 'paper') {
+        winner = `User Selected: ${this.id.toUpperCase()}, Computer Selected: ${compChoice.toUpperCase()}. User WINS!!`
+    } else if (this.id === 'scissors' && compChoice === 'scissors') {
+        winner = `User Selected: ${this.id.toUpperCase()}, Computer Selected: ${compChoice.toUpperCase()}. It's a tie! Try again.`
+    }
+
+    document.getElementById('winner').innerHTML = winner;
+};
+
+
+
+
+
+
+
+
+
+
